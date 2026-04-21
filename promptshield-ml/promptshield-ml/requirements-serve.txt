@@ -1,0 +1,12 @@
+# ─── Server dependencies ─────────────────────────────────────────────────────
+# Install: pip install -r requirements-serve.txt
+# Much lighter than training — no torch needed at runtime!
+
+onnxruntime>=1.18       # ~150 MB (vs 2GB+ for PyTorch)
+# onnxruntime-gpu>=1.18 # uncomment for GPU inference
+transformers>=4.40      # tokenizer only (no model weights loaded)
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.0
+requests>=2.31          # for PromptShield → server HTTP calls
+numpy>=1.26

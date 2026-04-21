@@ -1,0 +1,15 @@
+# ─── Training dependencies ───────────────────────────────────────────────────
+# Install: pip install -r requirements-train.txt
+#
+# GPU note: replace torch with CUDA build if needed:
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
+
+torch>=2.1
+transformers>=4.40
+datasets>=2.18
+peft>=0.10              # LoRA support
+scikit-learn>=1.4
+onnx>=1.16
+onnxruntime>=1.18       # CPU inference
+# onnxruntime-gpu>=1.18  # uncomment for GPU ONNX inference
+accelerate>=0.27        # needed by HuggingFace Trainer
